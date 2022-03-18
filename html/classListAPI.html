@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5 classList API</title>
+    </head>
+    <body>
+        <p><a href="index.html">Back to index</a></p>
+        <hr>
+        <h3>HTML5 classList API</h3>
+        <p id="myText">HTML5 introduced a new way to edit the class list of an element using the classList collection.<br>
+            Each HTML element returns the collection by accessing the <i><b>element.classList</b></i>  member. The class list allows<br>
+            to add, remove, toggle and to check if an element contains a specific class.</p>
+        <script>
+            var el = document.getElementById("myText");
+            el.classList.add("nice");    // adds the nice class to the paragraph
+            el.classList.remove("nice"); // removes the nice class from the paragraph
+            el.classList.toggle("nice"); // adds the nice class to the paragraph again, since  
+                                         // it does not currently containe the nice class.
+            
+            if (el.classList.contains("nice")) {
+                alert("The element containes the 'nice' class.");
+            }
+        </script>
+    </body>
+</html>

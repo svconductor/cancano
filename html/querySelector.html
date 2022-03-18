@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>querySelector and querySelectorAll methods</title>
+    </head>
+    <body>
+        <p><a href="index.html">Back to index</a></p>
+        <hr>
+        <p class="nice">This is a nice paragraph</p>
+        <p class="nice">This is another nice paragraph</p>
+        <p>This is a standard paragraph</p>
+        <script>
+            // this code colors the first nice paragraph in blue
+            var firstNiceParagraph = document.querySelector(".nice");
+            firstNiceParagraph.style.color = "blue";
+        </script>
+    </body>
+</html>

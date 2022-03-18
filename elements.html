@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        dl {
+            color: gray;
+            margin: 0.5em 0;
+        }
+        
+        dt {
+            font-weight: bold;
+            color: purple;
+        }
+        
+        abbr,
+        time {
+            color: green;
+        }
+    </style>
+    <title>HTML Elements</title>
+</head>
+
+<body>
+    <h1>HTML Elements</h1>
+    <h3>Quick hummus recipe</h3>
+    <p>This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>
+
+    <p>Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.</p>
+
+    <!-- Unordered list -->
+    <h3 style="color: red;">Unordered List</h3>
+
+    <h3>Ingredients</h3>
+    <ul>
+        <li>1 can (400g) of chick peas (garbanzo beans)</li>
+        <li>175g of tahini</li>
+        <li>6 sundried tomatoes</li>
+        <li>Half a red pepper</li>
+        <li>A pinch of cayenne pepper</li>
+        <li>1 clove of garlic</li>
+        <li>A dash of olive oil</li>
+    </ul>
+
+    <!-- Oredered list -->
+    <h3 id="ordered-list" style="color: red;">Ordered List</h3>
+
+    <h3>Instructions</h3>
+    <oL>
+        <li>Remove the skin from the garlic, and chop coarsely</li>
+        <li>Remove all the seeds and stalk from the pepper, and chop coarsely</li>
+        <li>Add all the ingredients into a food processor</li>
+        <li>Process all the ingredients into a paste.
+            <ul>
+                <li> If you want a coarse "chunky" hummus, process it for a short time</li>
+                <li> If you want a smooth hummus, process it for a longer time</li>
+            </ul>
+        </li>
+    </oL>
+
+    <p>For a different flavour, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.
+    </p>
+
+    <h3>Storage</h3>
+
+    <p>Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you've made it. If it starts to become fizzy, you should definitely discard it.</p>
+
+    <p>Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</p>
+
+    <!-- Description list -->
+    <h3 style="color: red;">Description list</h3>
+
+    <h3>Advanced HTML Animals</h3>
+    <dl>
+        <dt>Llama</dt>
+        <dd>Tall, wooly quadruped, pointy ears. Sometimes rideable, but grumpy and spits a lot. Big fan of list items.</dd>
+        <dt>Anaconda</dt>
+        <dd>A very large constrictor snake; travels rapidly by way of anchors to sneak up on his prey.</dd>
+        <dt>Hippopotamus</dt>
+        <dd>His description is bottomless.</dd>
+        <dl>
+
+            <h3 style="color: red;">Italic, bold, underline...</h3>
+
+            <!-- scientific names -->
+            <p>
+                The Ruby-throated Hummingbird (<i>Archilochus colubris</i>) is the most common hummingbird in Eastern North America.
+            </p>
+
+            <!-- foreign words -->
+            <p>
+                The menu was a sea of exotic words like <i lang="uk-latn">vatrushka</i>,
+                <i lang="id">nasi goreng</i> and <i lang="fr">soupe à l'oignon</i>.
+            </p>
+            <!-- a known misspelling -->
+            <p>
+                Someday I'll learn how to <u style="text-decoration-line: underline; text-decoration-style: wavy;">spel</u> better.
+            </p>
+
+            <!-- Highlight keywords in a set of instructions -->
+            <ol>
+                <li>
+                    <b>Slice</b> two pieces of bread off the loaf.
+                </li>
+                <li>
+                    <b>Insert</b> a tomato slice and a leaf of lettuce between the slices of bread.
+                </li>
+            </ol>
+            <h3 style="color: red;">Links</h3>
+
+            <!-- Extrnal link -->
+            <p>Plan your cycling vacation with <a href="https://italy-cycling-guide.info/" target="_blank" title="Guides to tours, cycleways and cycle routes, and lots of resources to help you plan your trip">Italy Cycling Guide</a>.</p>
+
+            <!-- Same root, one directory down -->
+            <p>The <a href="html/index.html" title="A standard &apos;Hello World&apos; page">first web page</a> after 20 years...</p>
+
+            <!-- Document fragment -->
+            <p>A document fragment reference back to recipe's <a href=#ordered-list>Ordered List</a></p>
+
+            <!-- Download attribute -->
+            <p><a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US" download="firefox-latest-64bit-installer.exe"> Download Latest Firefox for Windows (64-bit) (English, US)</a></p>
+
+            <!-- E-mail links -->
+            <p style="font-weight: bold;">Email links</p>
+
+            <uL>
+                <li><a href="mailto:">mailto:</a></li>
+                <li><a href="mailto:dimoumtzidis@icloud.com">mailto:dimoumtzidis@icloud.com</a></li>
+                <li><a href="mailto:dimoumtzidis@icloud.com,capocervo@icloud.com">mailto:dimoumtzidis@icloud.com,capocervo@icloud.com</a></li>
+                <li><a href="mailto:dimoumtzidis@icloud.com?cc=capocervo@icloud.com">mailto:dimoumtzidis@icloud.com?cc=capocervo@icloud.com</a></li>
+                <li><a href="mailto:dimoumtzidis@icloud.com?cc=capocervo@icloud.com&subject=This%20is%20the%20subject">mailto:dimoumtzidis@icloud.com?cc=capocervo@icloud.com&subject=This%20is%20the%20subject"</a></li>
+            </uL>
+            <h3 style="color: red;">Advanced text formatting</h3>
+
+            <!--abbreviation -->
+            <p><strong><code>&lt;abbr&gt;</code></strong></p>
+
+            <p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our web documents.</p>
+            <p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
+
+            <!-- address -->
+            <p><strong><code>&lt;address&gt;</code></strong></p>
+            <address>
+        <p>Chris Mills, Manchester, The Grim North, UK</p>
+    </address>
+
+            <!-- sup & sub -->
+            <p><strong><code>&lt;sup&gt; &amp; &lt;sub&gt;</code></strong></p>
+
+            <p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
+
+            <p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+
+            <p>If x<sup>2</sup> is 9, x must equal 3.</p>
+
+            <!-- pre -->
+            <p><strong><code>&lt;pre&gt;</code></strong></p>
+
+            <pre><code>var para = document.querySelector('p');
+
+para.onclick = function() {
+  alert('Owww, stop poking me!');
+}</code></pre>
+
+            <!-- code -->
+            <p><strong><code>&lt;code&gt;</code></strong></p>
+
+            <p>You shouldn't use presentational elements like <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.</p>
+
+            <!-- par -->
+            <p><strong><code>&lt;var&gt;</code></strong></p>
+
+            <p>In the above JavaScript example, <var>para</var> represents a paragraph element.</p>
+
+            <!-- kpd -->
+            <p><strong><code>&lt;kbd&gt;</code></strong></p>
+
+            <p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
+
+            <!-- samp -->
+            <p><strong><code>&lt;samp&gt;</code></strong></p>
+            <pre>$ <kbd>ping mozilla.org</kbd>
+<samp>PING mozilla.org (63.245.215.20): 56 data bytes
+64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+
+            <!-- Advanced text semantics -->
+            <h3 style="color: red;">Advanced text semantics</h3>
+            <p>Let's start with a quote:</p>
+
+            <blockquote cite="https://developer.mozilla.org/en-US/docs/Learn/Accessibility">
+                <p>By default, <abbr title="HyperText Markup Language">HTML</abbr> is accessible, if used correctly.</p>
+            </blockquote>
+
+            <p><abbr title="Cascading Style Sheets">CSS</abbr> can also be used to make web pages more, or less, accessible.</p>
+
+            <p>Chemical Formulae: H<sub>2</sub>O (Water), C<sub>2</sub>H<sub>6</sub>O (Ethanol).</p>
+
+            <p>Dates: <time datetime="2019-12-25">December 25th 2019</time> (Christmas Day), <time datetime="2019-11-02">November 2nd 2019</time> (Día de los Muertos).</p>
+            <hr>
+            <footer>
+                <p><a href="../learning/">Back to root</a></p>
+            </footer>
+
+            <div style="margin-bottom: 100px;"></div>
+</body>
+
+</html>

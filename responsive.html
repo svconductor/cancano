@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive HTML images</title>
+    <style>
+        html {
+            font-family: sans-serif;
+            background-color: gray;
+        }
+        
+        body {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+        }
+        
+        header {
+            background: url(images/responsive/header.jpeg) no-repeat center;
+            height: 200px;
+        }
+        
+        section {
+            padding: 20px;
+        }
+        
+        p {
+            line-height: 1.5;
+        }
+        
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <section>
+            <h1>Responsive image technologies </h1>
+            <p><em>Resize browser and the suitable image will be loaded</em></p>
+            <h2>Art direction problem</h2>
+            <p>
+                An improvement would be to display a cropped version of the image which displays the important details of the image when the site is viewed on a narrow screen. A second cropped image could be displayed for a medium-width screen device, likea tablet. The
+                general problem whereby you want to serve different cropped images in that way, for various layouts, is commonly known as the <strong>art direction problem</strong>.
+            </p>
+
+            <!-- Art direction: Different displays, different images-->
+            <picture>
+                <source media="(max-width: 799px)" srcset="images/responsive/elva-480w-close-portrait.jpeg">
+                <source media="(min-width: 800px)" srcset="images/responsive/elva-800w.jpeg">
+                <img src="images/responsive/elva-800w.jpeg" alt="Chris standing up holding his daughter Elva">
+            </picture>
+
+            <h2>Resolution switching problem</h2>
+            <p>
+                In addition, there is no need to embed such large images on the page if it is being viewed on a mobile screen. And conversely, a small raster image starts to look grainy when displayed larger than its original size (a raster image is a set number of pixels
+                wide and a set number of pixels tall, as we saw when we looked at vector graphics). This is called the resolution switching problem.
+            </p>
+
+            <!-- Resolution switching: Different sizes -->
+            <img srcset="images/responsive/elva-fairy-480w.jpeg 480w,
+                         images/responsive/elva-fairy-800w.jpeg 800w" sizes="(max-width: 600px) 480px,
+                         800px" src="images/responsive/elva-fairy-800w.jpeg" alt="Elva dressed as a fairy">
+
+            <p>Header image originally by <a href="https://www.flickr.com/photos/miwok/17086751527/">Miwok</a>.</p>
+            <hr>
+            <p><a href="../learning/">Back to root</a></p>
+        </section>
+    </main>
+
+</body>
+
+</html>
