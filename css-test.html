@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test CSS</title>
+    <style>
+        body {
+            width: 800px;
+            padding: 0px 5px;
+        }
+        /* Specificity & Inheritance examples for three h2 headings
+        ------------------------------------------------------------- */
+        
+        h2 {
+            font-size: 2em;
+            color: #000;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        .small {
+            font-size: 1em;
+        }
+        
+        .bright {
+            color: rebeccapurple;
+        }
+        /* Specificity & Inheritance examples for two paragraphs
+        ------------------------------------------------------------- */
+        /* specificity: 0101 */
+        
+        #outer a {
+            background-color: red;
+        }
+        /* specificity: 0201 */
+        
+        #outer #inner a {
+            background-color: blue;
+        }
+        /* specificity: 0104 */
+        
+        #outer div ul li a {
+            color: yellow;
+        }
+        /* specificity: 0113 */
+        
+        #outer div ul .nav a {
+            color: white;
+        }
+        /* specificity: 0024 */
+        
+        div div li:nth-child(2) a:hover {
+            border: 10px solid black;
+        }
+        /* specificity: 0023 */
+        
+        div li:nth-child(2) a:hover {
+            border: 10px dashed black;
+        }
+        /* specificity: 0033 */
+        
+        div div .nav:nth-child(2) a:hover {
+            border: 10px double black;
+        }
+        
+        a {
+            display: inline-block;
+            line-height: 40px;
+            font-size: 20px;
+            text-decoration: none;
+            text-align: center;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            padding: 0;
+        }
+        
+        li {
+            list-style-type: none;
+        }
+        /* The !important value has higher specificity and overrides the ID selector
+        ---------------------------------------------------------------------------- */
+        
+        #winning {
+            background-color: red;
+            border: 1px solid black;
+        }
+        
+        .better {
+            background-color: gray;
+            border: none !important;
+        }
+        
+        p {
+            background-color: blue;
+            color: white;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Heading with no class</h2>
+    <h2 class="small">Heading with class of small</h2>
+    <h2 class="bright">Heading with class of bright</h2>
+
+    <div id="outer" class="container">
+        <div id="inner" class="container">
+            <ul>
+                <li class="nav"><a href="#">One</a></li>
+                <li class="nav"><a href="#">Two</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="better">This is a paragraph</p>
+    <p class="better" id="winning">One selector to rule them all!</p>
+
+    <div id="outer" class="container">
+        <div id="inner" class="container">
+            <ul>
+                <li class="nav"><a href="#">One</a></li>
+                <li class="nav"><a href="#">Two</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

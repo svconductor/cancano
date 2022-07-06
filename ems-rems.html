@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ems and rems</title>
+    <style>
+        html {
+            font-size: 16px;
+        }
+        
+        p {
+            color: blue;
+            display: inline;
+        }
+        
+        span {
+            /* border: 1px solid grey; */
+            background-color: rgba(230, 230, 230, 0.5);
+            padding: 5px;
+            display: inline;
+        }
+        
+        em {
+            color: red;
+        }
+        
+        .ems li {
+            font-size: 1.3em;
+        }
+        
+        .rems li {
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <p>root element size / default 16px</p>
+    <!-- root element size / default 16px-->
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three
+            <ul>
+                <li>Three A</li>
+                <li>Three B
+                    <ul>
+                        <li>Three B 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <p>1.3em font size of parent element / <span>nested lists inherit from parent</span></p>
+    <!-- 1.3em font size of parent element / nested lists inherit from parent -->
+    <ul class="ems">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three
+            <ul>
+                <li>Three A</li>
+                <li>Three B
+                    <ul>
+                        <li>Three B 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <p>1.3rem font size of root element / <span>nested lists <em>do not</em> inherit from parent</span>
+    </p>
+    <!-- 1.3rem font size of root element / nested lists do not inherit from parent -->
+    <ul class="rems">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <ul>
+            <li>Three A</li>
+            <li>Three B</li>
+            <ul>
+                <li>Three B 2</li>
+            </ul>
+        </ul>
+    </ul>
+</body>
+
+</html>
